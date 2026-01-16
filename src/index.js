@@ -1,6 +1,6 @@
 import {renderContent as renderHome} from './home.js'
-import {} from './menu.js'
-import {} from './about.js'
+import {renderContent as renderMenu} from './menu.js'
+import {renderContent as renderAbout} from './about.js'
 import './styles.css'
 
 //event listeners for tab buttons
@@ -16,9 +16,9 @@ homeBtn.addEventListener('click', () => {
 })
 
 menuBtn.addEventListener('click', () => {
-    //load menu page from menujs import
+    renderMenu()
 })
 
 aboutBtn.addEventListener('click', () => {
-    //load about page from aboutjs import
+    renderAbout()
 })

@@ -64,6 +64,8 @@ function createDetailsSection() {
 
 
 export function renderContent() {
+    content.innerHTML = ''
+    contentCard.innerHTML = ''
     createHeroSection()
     createDetailsSection()
     content.appendChild(contentCard)
