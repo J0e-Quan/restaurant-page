@@ -112,7 +112,7 @@ nav > button:hover {
     flex-basis: 35%;
 }
 
-.title {
+.restaurant-name {
     font-size: 5rem;
     margin-bottom: -0.5rem;
 }
@@ -166,7 +166,7 @@ nav > button:hover {
     border-radius: 32px;
 }
 
-.menu.title {
+.title {
     text-align: center;
     font-size: 5rem;
     margin-bottom: 1rem;

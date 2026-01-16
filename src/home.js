@@ -10,7 +10,7 @@ function createHeroSection() {
     let heroCardText = document.createElement('div')
     heroCardText.classList.add('hero-card-text')
     let title = document.createElement('h1')
-    title.classList.add('title')
+    title.classList.add('restaurant-name')
     title.textContent = 'Plush Munch'
     heroCardText.appendChild(title)
     let location = document.createElement('h4')
