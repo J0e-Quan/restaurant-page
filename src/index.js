@@ -1,6 +1,6 @@
-// import {} from './home.js'
-// import {} from './menu.js'
-// import {} from './about.js'
+import {renderContent as renderHome} from './home.js'
+import {} from './menu.js'
+import {} from './about.js'
 import './styles.css'
 
 //event listeners for tab buttons
@@ -8,8 +8,11 @@ let homeBtn = document.querySelector('#home')
 let menuBtn = document.querySelector('#menu')
 let aboutBtn = document.querySelector('#about')
 
+//home page is rendered at first
+renderHome()
+
 homeBtn.addEventListener('click', () => {
-    //load home page from homejs import
+    renderHome()
 })
 
 menuBtn.addEventListener('click', () => {
