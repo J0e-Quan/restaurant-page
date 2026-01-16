@@ -51,7 +51,7 @@ function createAsianSection() {
     asianText.textContent = 'Enjoy unique and expertly crafted dishes, rich with flavours close to home!'
     asianSection.appendChild(asianText)
     createFoodCard(asianSection, 'Chicken Rice', 'A Hainanese classic, served with spicy local chili and braised vegetables.', '12', 'Chili is served separately, boneless chicken option available upon request')
-    createFoodCard(asianSection, 'Nasi Lemak', 'Signature Malaysian dish featuring anchovies, fragrant rice, spicy sambal paste, peanuts and cucmbers.', '8', 'Sambal is served separately')
+    createFoodCard(asianSection, 'Nasi Lemak', 'Malaysian dish featuring anchovies, fragrant rice, spicy sambal paste, peanuts and cucmbers.', '8', 'Sambal is served separately')
     createFoodCard(asianSection, 'Hokkien Mee', 'Spicy noodle soup served with prawns, hard boiled egg and bean sprouts.', '10')
     createFoodCard(asianSection, 'Miso Ramen', 'Ramen noodles in rich miso soup, served with fish cake and bean sprouts.', '8', 'Teriyaki Chicken addon available for RM 5')
     createFoodCard(asianSection, 'Kare Chicken Katsu Rice', 'Rice and chicken cutlets served with Japanese curry.', '12')
@@ -98,6 +98,66 @@ function createDessertSection() {
     contentCard.appendChild(dessertSection)
 }
 
+function createDrinkCard(drinksList, name, hotPrice, coldPrice, note) {
+    let drinkCard = document.createElement('div')
+    drinkCard.classList.add('drink', 'card')
+    let drinkName = document.createElement('h3')
+    drinkName.classList.add('drink', 'name')
+    drinkName.textContent = name
+    drinkCard.appendChild(drinkName)
+    let hotText = document.createElement('p')
+    hotText.classList.add('hot', 'text')
+    hotText.textContent = 'Hot: '
+    drinkCard.appendChild(hotText)
+    let hotPriceText = document.createElement('h3')
+    hotPriceText.classList.add('hot', 'price')
+    hotPriceText.textContent = 'RM: ' + hotPrice
+    drinkCard.appendChild(hotPriceText)
+    let coldText = document.createElement('p')
+    coldText.classList.add('cold', 'text')
+    coldText.textContent = 'Cold: '
+    drinkCard.appendChild(coldText)
+    let coldPriceText = document.createElement('h3')
+    coldPriceText.classList.add('cold', 'price')
+    coldPriceText.textContent = 'RM: ' + coldPrice
+    drinkCard.appendChild(coldPriceText)
+    if (note !== undefined) {
+        let drinkNote = document.createElement('h4')
+        drinkNote.classList.add('drink', 'note')
+        drinkNote.textContent = 'NOTE: ' + note
+        drinkCard.appendChild(drinkNote)
+    }    
+    drinksList.appendChild(drinkCard)
+}
+
+function createDrinksSection() {
+    let drinksSection = document.createElement('div')
+    let drinksTitle = document.createElement('h2')
+    drinksTitle.classList.add('menu', 'small-title')
+    drinksTitle.textContent = 'Drinks'
+    drinksSection.appendChild(drinksTitle)
+    let drinksText = document.createElement('p')
+    drinksText.classList.add('menu', 'text')
+    drinksText.textContent = 'Quench your thirst with our refreshing and mood-boosting beverages!'
+    drinksSection.appendChild(drinksText)
+    let drinksList = document.createElement('div')
+    drinksList.classList.add('drinks-list')
+    createDrinkCard(drinksList, 'Milk Tea (Teh)', '3', '4')
+    createDrinkCard(drinksList, 'Local Coffee', '3', '4')
+    createDrinkCard(drinksList, 'Milo', '3', '4', 'Milo Dinosaur addon available for RM 3')
+    createDrinkCard(drinksList, 'Herbal Tea', '2', '3')
+    createDrinkCard(drinksList, 'Soy Bean', '2', '3')
+    createDrinkCard(drinksList, 'Tea (Teh O)', '2', '3', 'Limau addon available for RM 1')
+    createDrinkCard(drinksList, 'Americano', '2', '3')
+    createDrinkCard(drinksList, 'Latte', '5', '6', 'Oat milk addon available for RM 2')
+    createDrinkCard(drinksList, 'Cappuccino', '5', '6', 'Oat milk addon available for RM 2')
+    createDrinkCard(drinksList, 'Chocolate', '4', '5')
+    createDrinkCard(drinksList, 'Matcha Latte', '5', '6', 'Oat milk addon available for RM 2')
+    createDrinkCard(drinksList, 'Mineral Water', '1', '2', 'Sparkling water addon available for RM 2')
+    drinksSection.appendChild(drinksList)
+    contentCard.appendChild(drinksSection)
+}
+
 export function renderContent() {
     content.innerHTML = ''
     contentCard.innerHTML = ''
@@ -105,6 +165,6 @@ export function renderContent() {
     createAsianSection()
     createWesternSection()
     createDessertSection()
-    // createDrinksSection()
+    createDrinksSection()
     content.appendChild(contentCard)
 }
