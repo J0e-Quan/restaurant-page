@@ -73,7 +73,7 @@ function createWesternSection() {
     createFoodCard(westernSection, 'Fish & Chips', 'Fresh fried fish in tartar sauce, served with fries and salad of the day.', '14', 'Wedges addon available for RM 2')
     createFoodCard(westernSection, 'Spaghetti Bolognese', 'Spaghetti in flavourful tomato sauce with minced meat.', '10')
     createFoodCard(westernSection, 'Spaghetti Aglio Olio', 'Spaghetti seasoned with tomatoes and various spices.', '8', 'Non-spicy version available upon request')
-    createFoodCard(westernSection, 'Double Cheeseburger', 'Beef and cheese slices covered with fresh burger buns.', '10', 'Chicken version available upon request')
+    createFoodCard(westernSection, 'Double Cheese Burger', 'Beef and cheese slices covered with fresh burger buns.', '10', 'Chicken version available upon request')
     createFoodCard(westernSection, 'Pretty Cheesy Pizza', 'Simple but delicious 4 cheese pizza.', '8')
     createFoodCard(westernSection, 'Red, Yellow and Brown', 'Pizza with pepperoni, cheese and mushrooms.', '10')
     contentCard.appendChild(westernSection)
@@ -93,7 +93,7 @@ function createDessertSection() {
     createFoodCard(dessertSection, 'Waffles', 'Classic fluffy treats, served with butter and fruit jam', '6')
     createFoodCard(dessertSection, 'Cendol', 'A local favourite, served with black grass jelly.', '6')
     createFoodCard(dessertSection, 'Ice Kacang', 'Shaved ice enriched with gula melaka, red beans and sweet corn.', '6')
-    createFoodCard(dessertSection, 'Cheesecake', "Cake with cheese and a crumbly cookie layer at the bottom.", '6')
+    createFoodCard(dessertSection, 'Cheese Cake', "Cake with cheese and a crumbly cookie layer at the bottom.", '6')
     createFoodCard(dessertSection, 'Carrot Cake', 'Cake with carrots, spices, cream cheese, and nuts aplenty.', '6')
     contentCard.appendChild(dessertSection)
 }

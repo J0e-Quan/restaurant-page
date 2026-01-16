@@ -137,30 +137,18 @@ nav > button:hover {
 
 .card {
     background-color: rgb(210, 210, 210);
-    border-radius: 48px;
+    border-radius: 32px;
     padding: 1rem 2rem;
 }
 
 .detail.card {
     display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
     white-space: pre-line;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 1rem;
     padding: 1rem;
-}
-
-.hour-card {
-    padding: 1rem 2rem;
-    background-color: white;
-    border-bottom-left-radius: 32px;
-    border-top-left-radius: 32px;
-}
-
-.location-card {
-    padding: 1rem 2rem;
-    background-color: white;
-    border-bottom-right-radius: 32px;
-    border-top-right-radius: 32px;
 }
 
 .hour-title, .location-title {

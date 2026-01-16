@@ -34,7 +34,7 @@ function createDetailsSection() {
     let detailCard = document.createElement('div')
     detailCard.classList.add('detail', 'card')
     let hourCard = document.createElement('div')
-    hourCard.classList.add('hour-card')
+    hourCard.classList.add('hour', 'card')
     let hourTitle = document.createElement('h2')
     hourTitle.classList.add('hour-title')
     hourTitle.textContent = 'Opening Hours:'
@@ -45,7 +45,7 @@ function createDetailsSection() {
     hourCard.appendChild(hourText)
     detailCard.appendChild(hourCard)
     let locationCard = document.createElement('div')
-    locationCard.classList.add('location-card')
+    locationCard.classList.add('location', 'card')
     let locationTitle = document.createElement('h2')
     locationTitle.classList.add('location-title')
     locationTitle.textContent = 'Our Address:'
