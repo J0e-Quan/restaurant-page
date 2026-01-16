@@ -79,7 +79,24 @@ function createWesternSection() {
     contentCard.appendChild(westernSection)
 }
 
-
+function createDessertSection() {
+    let dessertSection = document.createElement('div')
+    let dessertTitle = document.createElement('h2')
+    dessertTitle.classList.add('menu', 'small-title')
+    dessertTitle.textContent = 'Dessert'
+    dessertSection.appendChild(dessertTitle)
+    let dessertText = document.createElement('p')
+    dessertText.classList.add('menu', 'text')
+    dessertText.textContent = 'Treat your taste buds (and traumatise your pancreas) with these sweet and lovely desserts!'
+    dessertSection.appendChild(dessertText)
+    createFoodCard(dessertSection, 'Ice Cream', 'Choose from vanilla, chocolate and strawberry goodness, served in a cup.', '4', 'Cone addon available for RM 2')
+    createFoodCard(dessertSection, 'Waffles', 'Classic fluffy treats, served with butter and fruit jam', '6')
+    createFoodCard(dessertSection, 'Cendol', 'A local favourite, served with black grass jelly.', '6')
+    createFoodCard(dessertSection, 'Ice Kacang', 'Shaved ice enriched with gula melaka, red beans and sweet corn.', '6')
+    createFoodCard(dessertSection, 'Cheesecake', "Cake with cheese and a crumbly cookie layer at the bottom.", '6')
+    createFoodCard(dessertSection, 'Carrot Cake', 'Cake with carrots, spices, cream cheese, and nuts aplenty.', '6')
+    contentCard.appendChild(dessertSection)
+}
 
 export function renderContent() {
     content.innerHTML = ''

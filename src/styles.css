@@ -194,6 +194,7 @@ nav > button:hover {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-align: center;
+    margin-top: 2rem;
 }
 
 .menu.text {
