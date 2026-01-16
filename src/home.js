@@ -1,9 +1,10 @@
 import heroImg from './assets/hero-image.jpg'
 
-export function renderContent() {
-    let content = document.querySelector('#content')
-    let contentCard = document.createElement('div')
-    contentCard.classList.add('content-card')
+let content = document.querySelector('#content')
+let contentCard = document.createElement('div')
+contentCard.classList.add('content-card')
+
+function createHeroSection() {
     let heroCard = document.createElement('div')
     heroCard.classList.add('hero-card')
     let heroCardText = document.createElement('div')
@@ -26,6 +27,19 @@ export function renderContent() {
     heroPhoto.src = heroImg
     heroPhoto.alt = 'A picture showing the front of the fictional restaurant, with various plushies residing in it'
     heroCard.appendChild(heroPhoto)
-    contentCard.appendChild(heroCard)
+    appendSection(heroCard)
+}
+
+function createDetailsSection() {
+    
+}
+
+function appendSection(section) {
+    contentCard.appendChild(section)
+}
+
+export function renderContent() {
+    createHeroSection()
+    createDetailsSection()
     content.appendChild(contentCard)
 }
