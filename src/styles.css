@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(./fonts/InterVariable.woff2),
+    format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(./fonts/InterVariable-Italic.woff2),
+    format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url(./fonts/Urbanist-VariableFont_wght.woff2),
+    format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url(./fonts/Urbanist-Italic-VariableFont_wght.woff2),
+    format('woff2-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', serif;
+    font-weight: 550;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+}
+
+body {
+    background-color: rgb(210, 210, 210);
+    margin: 1rem 2rem;
+}
+
+header {
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 5rem;
+    box-shadow: 0 0.5rem 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+nav > button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 2.5rem;
+    margin-bottom: -1rem;
+    background-color: rgb(139, 189, 254);
+    padding: 1rem 2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+nav > button:hover {
+    background-color: rgb(202, 225, 255);
+    box-shadow: 0 -0.0 0.5rem;
+    font-weight: 600;
+}

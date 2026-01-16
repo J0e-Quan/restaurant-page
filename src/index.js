@@ -1,6 +1,6 @@
-import {} from './home.js'
-import {} from './menu.js'
-import {} from './about.js'
+// import {} from './home.js'
+// import {} from './menu.js'
+// import {} from './about.js'
 import './styles.css'
 
 //event listeners for tab buttons
