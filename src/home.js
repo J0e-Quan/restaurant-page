@@ -27,16 +27,41 @@ function createHeroSection() {
     heroPhoto.src = heroImg
     heroPhoto.alt = 'A picture showing the front of the fictional restaurant, with various plushies residing in it'
     heroCard.appendChild(heroPhoto)
-    appendSection(heroCard)
+    contentCard.appendChild(heroCard)
 }
 
 function createDetailsSection() {
-    
+    let detailCard = document.createElement('div')
+    detailCard.classList.add('detail', 'card')
+    let hourCard = document.createElement('div')
+    hourCard.classList.add('hour-card')
+    let hourTitle = document.createElement('h2')
+    hourTitle.classList.add('hour-title')
+    hourTitle.textContent = 'Opening Hours:'
+    hourCard.appendChild(hourTitle)
+    let hourText = document.createElement('p')
+    hourText.classList.add('hour-text')
+    hourText.textContent = 'We are open everyday from 10am - 10pm! \n(Closed on public holidays - we have lives too!)'
+    hourCard.appendChild(hourText)
+    detailCard.appendChild(hourCard)
+    let locationCard = document.createElement('div')
+    locationCard.classList.add('location-card')
+    let locationTitle = document.createElement('h2')
+    locationTitle.classList.add('location-title')
+    locationTitle.textContent = 'Our Address:'
+    locationCard.appendChild(locationTitle)    
+    let locationText = document.createElement('p')
+    locationText.classList.add('location-text')
+    locationText.textContent =
+    `123-66, Some random apartment,
+    Really Cool Street, Big Town,
+    12345 Popular District,
+    Lovely State, Malaysia`
+    locationCard.appendChild(locationText)
+    detailCard.appendChild(locationCard)
+    contentCard.appendChild(detailCard)
 }
 
-function appendSection(section) {
-    contentCard.appendChild(section)
-}
 
 export function renderContent() {
     createHeroSection()
