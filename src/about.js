@@ -25,34 +25,80 @@ function createTitleSection() {
     contentCard.appendChild(titleCard)
 }
 
+function createAboutPeriod(name, title) {
+    //prepare period placeholder element names
+    let cardElement = name + 'Card'
+    let titleElement = name + 'Title'
+
+    //create period
+    cardElement = document.createElement('div')
+    cardElement.classList.add(name, 'card')
+    titleElement = document.createElement('h2')
+    titleElement.classList.add('section-title')
+    titleElement.textContent = title
+    cardElement.appendChild(titleElement)
+    contentCard.appendChild(cardElement)
+}
+
+function createAboutCard(cardName, order, name, date, description, src, alt) {
+    //prepare card placeholder element names
+    let cardElement = contentCard.querySelector('.' + cardName + '.card')
+    let containerElement = name + 'Container'
+    let textElement = name + 'Text'
+    let dateElement = name + 'Date'
+    let descriptionElement = name + 'Description'
+    let photoElement = name + 'Photo'
+
+    //create card
+    containerElement = document.createElement('div')
+    containerElement.classList.add('section-container')
+    textElement = document.createElement('div')
+    textElement.classList.add('text-container')
+    dateElement = document.createElement('h3')
+    dateElement.classList.add('section-date')
+    dateElement.textContent = date
+    textElement.appendChild(dateElement)
+    descriptionElement = document.createElement('p')
+    descriptionElement.classList.add('section-text')
+    descriptionElement.textContent = description
+    textElement.appendChild(descriptionElement)
+    photoElement = document.createElement('img')
+    photoElement.classList.add('section-photo')
+    photoElement.src = src
+    photoElement.alt = alt
+
+    //order: tp = text then photo, pt = photo then text
+    if (order === 'tp') {
+        containerElement.appendChild(textElement)
+        containerElement.appendChild(photoElement)
+    } else if (order === 'pt') {
+        containerElement.appendChild(photoElement)
+        containerElement.appendChild(textElement)
+    }
+    cardElement.appendChild(containerElement)
+}
+
 function createBeginningsSection() {
-    let beginningsCard = document.createElement('div')
-    beginningsCard.classList.add('card')
-    let beginningsTitle = document.createElement('h2')
-    beginningsTitle.classList.add('section-title')
-    beginningsTitle.textContent = 'Beginnings'
-    beginningsCard.appendChild(beginningsTitle)
-    contentCard.appendChild(beginningsCard)
-    let beginningsContainer = document.createElement('div')
-    beginningsContainer.classList.add('beginnings', 'section-container')
-    let beginningsText = document.createElement('div')
-    beginningsText.classList.add('beginnings-text')
-    let beginningsDate = document.createElement('h3')
-    beginningsDate.classList.add('section-date')
-    beginningsDate.textContent = '2016'
-    beginningsText.appendChild(beginningsDate)
-    let beginningsDescription = document.createElement('p')
-    beginningsDescription.classList.add('section-text')
-    beginningsDescription.textContent = "After coming back from a 1 year expedition to Taiwan, founder Pink Bear Bear decided to continue exploring new places, and set up a new Plushie Kingdom in Alor Setar. Far away from his original home, Plushie Village in Bagan Serai, the Plushie Kingdom managed to attract many new inhabitants!"
-    beginningsText.appendChild(beginningsDescription)
-    beginningsContainer.appendChild(beginningsText)
-    let beginningsPhoto = document.createElement('img')
-    beginningsPhoto.classList.add('beginnings', 'section-photo')
-    beginningsPhoto.src = alorSetar
-    beginningsPhoto.alt = 'Picture showing Pink Bear Bear and his family staying at Alor Setar'
-    beginningsContainer.appendChild(beginningsPhoto)
-    beginningsCard.appendChild(beginningsContainer)
-    contentCard.appendChild(beginningsCard)
+    createAboutPeriod('beginnings', 'Beginnings')
+    createAboutCard('beginnings', 
+                    'tp', 
+                    'beginnings', 
+                    '2016', 
+                    "After coming back from a 1 year expedition to Taiwan, founder Pink Bear Bear decided to continue exploring new places, and set up a new Plushie Kingdom in Alor Setar. Far away from his original home, Plushie Village in Bagan Serai, the Plushie Kingdom managed to attract many new inhabitants!", 
+                    alorSetar, 
+                    'Picture showing Pink Bear Bear and his family staying at Alor Setar')
+    createAboutCard('beginnings',
+                    'pt',
+                    'inFlight',
+                    '2017 - 2019',
+                    "Pink Bear Bear was a frequent traveller who would go on to visit many countries. It was during these trips, where he discovered the joy of sharing good food and drinks with friends and family. The first Plush Munch would open in the Plushie Kingdom in Alor Setar in 2018. Pink Bear Bear would continue to add new menu items and meet many more new friends!",
+                    inFlightMeals,
+                    'Picture showing Pink Bear Bear looking at a in-flight meals menu'
+                    )
+}
+
+function createRelocationSection() {
+
 }
 
 export function renderContent() {
@@ -60,8 +106,8 @@ export function renderContent() {
     contentCard.innerHTML = ''
     createTitleSection()
     createBeginningsSection()
+    createRelocationSection()
+    //createImprovementSection()
     // createExpansionSection()
-    // createCurrentSection()
-    // createResearchSection()
     content.appendChild(contentCard)
 }
