@@ -278,14 +278,13 @@ nav > button:hover {
 .section-title {
     font-size: 4rem;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .section-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 
 .text-container {
@@ -313,4 +312,8 @@ nav > button:hover {
     min-width: 0;
     display: block;
     border-radius: 2rem;
+}
+
+.about.card {
+    margin-top: 2rem;
 }

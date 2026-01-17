@@ -32,7 +32,7 @@ function createAboutPeriod(name, title) {
 
     //create period
     cardElement = document.createElement('div')
-    cardElement.classList.add(name, 'card')
+    cardElement.classList.add(name, 'about', 'card')
     titleElement = document.createElement('h2')
     titleElement.classList.add('section-title')
     titleElement.textContent = title
@@ -98,7 +98,14 @@ function createBeginningsSection() {
 }
 
 function createRelocationSection() {
-
+    createAboutPeriod('relocation', 'Relocation')
+    createAboutCard('relocation', 
+                    'tp', 
+                    'relocation', 
+                    '2020 - 2021',
+                    "During a brief period of loosened lockdown regulations, the Plushie Kingdom was relocated to Penang. Plush Munch continued to operate during the pandemic in their shiny new castle! Despite the continuous success, Pink Bear Bear never stopped improving Plush Munch, and set his eyes toward a major new expansion...",
+                    penangOld,
+                    'Picture showing Pink Bear Bear with his friends and family at the relocated Plushie Kingdom in Penang')
 }
 
 export function renderContent() {
