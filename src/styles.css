@@ -327,7 +327,7 @@ nav > button:hover {
 
 .improvement-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     justify-content: center;
     gap: 2rem;    
 }
@@ -337,7 +337,7 @@ nav > button:hover {
     display: grid; 
     grid-template-columns: max-content, max-content;
     border-radius: 32px;
-    width: minmax(500px, 1fr);
+    width: minmax(400px, 1fr);
 }
 
 .improvement-photo {

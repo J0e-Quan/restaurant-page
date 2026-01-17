@@ -152,6 +152,17 @@ function createImprovementSection() {
     contentCard.appendChild(improvementCard)
 }
 
+function createExpansionSection() {
+    createAboutPeriod('expansion', 'Expansion')
+    createAboutCard('expansion', 
+                    'tp', 
+                    'expansion', 
+                    '2024 - Present',
+                    "After enhancing the restaurant's menu, Plush Munch was moved and expanded to a new location in Penang. Plushie Kingdom and Plushie Village were combined after years of separation, ensuring Plush Munch's wonderful food and drinks would be enjoyed by as many plushies as possible! To this day, Plush Munch remains one of the most popular restaurants in the area, and we can't wait for you to visit! Bon appetit!",
+                    current,
+                    "Picture showing Pink Bear Bear at the current Plush Munch location in Penang")
+}
+
 export function renderContent() {
     content.innerHTML = ''
     contentCard.innerHTML = ''
@@ -159,6 +170,6 @@ export function renderContent() {
     createBeginningsSection()
     createRelocationSection()
     createImprovementSection()
-    // createExpansionSection()
+    createExpansionSection()
     content.appendChild(contentCard)
 }
