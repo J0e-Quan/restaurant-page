@@ -135,7 +135,7 @@ function createImprovementSection() {
     let improvementCard = document.createElement('div')
     improvementCard.classList.add('improvement', 'about', 'card')
     let improvementTitle = document.createElement('h2')
-    improvementTitle.classList.add('section-title')
+    improvementTitle.classList.add('improvement', 'section-title')
     improvementTitle.textContent = 'Improvement'
     improvementCard.appendChild(improvementTitle)
     let improvementCardText = document.createElement('p')

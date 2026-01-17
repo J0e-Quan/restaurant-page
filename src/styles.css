@@ -353,3 +353,7 @@ nav > button:hover {
     padding: 1rem 2rem;
     place-self: center;
 }
+
+.improvement.section-title {
+    margin-bottom: 2rem;
+}
