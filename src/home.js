@@ -66,6 +66,7 @@ function createDetailsSection() {
 export function renderContent() {
     content.innerHTML = ''
     contentCard.innerHTML = ''
+    window.scrollTo(0,0)
     createHeroSection()
     createDetailsSection()
     content.appendChild(contentCard)

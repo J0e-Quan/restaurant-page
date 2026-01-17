@@ -90,7 +90,7 @@ function createDessertSection() {
     dessertText.textContent = 'Treat your taste buds (and traumatise your pancreas) with these sweet and lovely desserts!'
     dessertSection.appendChild(dessertText)
     createFoodCard(dessertSection, 'Ice Cream', 'Choose from vanilla, chocolate and strawberry goodness, served in a cup.', '4', 'Cone addon available for RM 2')
-    createFoodCard(dessertSection, 'Waffles', 'Classic fluffy treats, served with butter and fruit jam', '6')
+    createFoodCard(dessertSection, 'Waffles', 'Classic fluffy treats, served with butter and fruit jam.', '6')
     createFoodCard(dessertSection, 'Cendol', 'A local favourite, served with black grass jelly.', '6')
     createFoodCard(dessertSection, 'Ice Kacang', 'Shaved ice enriched with gula melaka, red beans and sweet corn.', '6')
     createFoodCard(dessertSection, 'Cheese Cake', "Cake with cheese and a crumbly cookie layer at the bottom.", '6')
@@ -161,6 +161,7 @@ function createDrinksSection() {
 export function renderContent() {
     content.innerHTML = ''
     contentCard.innerHTML = ''
+    window.scrollTo(0,0)
     createTitleSection()
     createAsianSection()
     createWesternSection()

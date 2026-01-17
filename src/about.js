@@ -166,6 +166,7 @@ function createExpansionSection() {
 export function renderContent() {
     content.innerHTML = ''
     contentCard.innerHTML = ''
+    window.scrollTo(0,0)
     createTitleSection()
     createBeginningsSection()
     createRelocationSection()
