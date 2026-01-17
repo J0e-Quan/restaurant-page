@@ -65,7 +65,7 @@ header {
     box-shadow: 0 0.5rem 1rem;
     position: sticky;
     top: 1rem;
-    margin-bottom: 2rem;
+    margin: 0 -1rem 2rem -1rem;
 }
 
 nav {
@@ -327,9 +327,9 @@ nav > button:hover {
 
 .improvement-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-content: center;
-    gap: 2rem;    
+    gap: 5rem;    
 }
 
 .improvement.item {
