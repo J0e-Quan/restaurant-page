@@ -108,13 +108,57 @@ function createRelocationSection() {
                     'Picture showing Pink Bear Bear with his friends and family at the relocated Plushie Kingdom in Penang')
 }
 
+function createImprovementCard(improvementCard, name, src, alt, description) {
+    //prepare placeholder element names
+    let improvementList = improvementCard.querySelector('.improvement-list')
+    let cardElement = name + 'Card'
+    let photoElement = name + 'Photo'
+    let descriptionElement = name + 'Description'
+
+    //create card
+    cardElement = document.createElement('div')
+    cardElement.classList.add('improvement', 'item')
+    photoElement = document.createElement('img')
+    photoElement.classList.add('improvement-photo')
+    photoElement.src = src
+    photoElement.alt = alt
+    cardElement.appendChild(photoElement)
+    descriptionElement = document.createElement('p')
+    descriptionElement.classList.add('improvement-text', 'item')
+    descriptionElement.textContent = description
+    cardElement.appendChild(descriptionElement)
+
+    improvementList.appendChild(cardElement)
+}
+
+function createImprovementSection() {
+    let improvementCard = document.createElement('div')
+    improvementCard.classList.add('improvement', 'about', 'card')
+    let improvementTitle = document.createElement('h2')
+    improvementTitle.classList.add('section-title')
+    improvementTitle.textContent = 'Improvement'
+    improvementCard.appendChild(improvementTitle)
+    let improvementCardText = document.createElement('p')
+    improvementCardText.classList.add('improvement-text')
+    improvementCardText.textContent = "Pink Bear Bear had an ambitious plan - to combine Plushie Kingdom and Plushie Village in a new location, with a big new Plush Munch restaurant! He wasn't satisfied with serving all those new customers with his current menu though, so he and his friends set out to spice up their menu with some incredible new items..."
+    improvementCard.appendChild(improvementCardText)
+    let improvementList = document.createElement('div')
+    improvementList.classList.add('improvement-list')
+    improvementCard.appendChild(improvementList)
+    createImprovementCard(improvementCard, 'coffee', coffee, 'Picture showing bearista researching coffee blends', "They searched for the finest coffee blends and beans...")
+    createImprovementCard(improvementCard, 'western', western, 'Picture showing Pink Bear Bear and friends dining at a western restaurant', "They gained more experience in cooking quality Western food...")
+    createImprovementCard(improvementCard, 'hotel', hotel, 'Picture showing Pink Bear Bear and friends examining a hotel in-room dining menu', "They ensured their food matched even the finest hotels...")
+    createImprovementCard(improvementCard, 'matcha', matcha, 'Picture showing Pink Bear Bear looking at a matcha latte', "They also learned to make a larger variety of refreshing drinks...")
+    contentCard.appendChild(improvementCard)
+}
+
 export function renderContent() {
     content.innerHTML = ''
     contentCard.innerHTML = ''
     createTitleSection()
     createBeginningsSection()
     createRelocationSection()
-    //createImprovementSection()
+    createImprovementSection()
     // createExpansionSection()
     content.appendChild(contentCard)
 }

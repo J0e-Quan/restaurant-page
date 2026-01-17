@@ -317,3 +317,39 @@ nav > button:hover {
 .about.card {
     margin-top: 2rem;
 }
+
+.improvement-text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.improvement-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-content: center;
+    gap: 2rem;    
+}
+
+.improvement.item {
+    background-color: white;
+    display: grid; 
+    grid-template-columns: max-content, max-content;
+    border-radius: 32px;
+    width: minmax(500px, 1fr);
+}
+
+.improvement-photo {
+    height: auto;
+    width: 100%;
+    min-width: 0;
+    display: block;
+    border-radius: 32px;
+}
+
+.improvement-text.item {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    place-self: center;
+}
