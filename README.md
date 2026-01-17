@@ -20,8 +20,8 @@ Live demo link: https://j0e-quan.github.io/restaurant-page/
  - All pictures were taken by me
 
 ## Gallery:
-![Picture showing the restaurant page's home page](./src/readme-assets/homepage.png)
-![Picture showing the drinks section on a wide desktop screen](./src/readme-assets/drinks-wide.png)
-![Picture showing the drinks section on a narrow mobile-like screen](./src/readme-assets/drinks-narrow.png)
-![Picture showing a grid of pictures on a wide desktop screen](./src/readme-assets/about-wide.png)
-![Picture showing a series of pictures on a narrow mobile-like screen](./src/readme-assets/about-narrow.png)
+![Picture showing the restaurant page's home page](./readme-assets/homepage.png)
+![Picture showing the drinks section on a wide desktop screen](./readme-assets/drinks-wide.png)
+![Picture showing the drinks section on a narrow mobile-like screen](./readme-assets/drinks-narrow.png)
+![Picture showing a grid of pictures on a wide desktop screen](./readme-assets/about-wide.png)
+![Picture showing a series of pictures on a narrow mobile-like screen](./readme-assets/about-narrow.png)
